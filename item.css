@@ -1,0 +1,48 @@
+.itemCard{
+    border: 0px solid;
+    
+    width: 280px;
+    height: 400px;
+    display: grid;
+    margin-top: 72px;
+    margin-left: 130px;
+    grid-template-columns: 320px auto;
+    align-items: flex-end;
+    position: absolute;
+   
+}
+
+.mainCard{
+    position: relative;
+    display: flex;
+    z-index: -1;
+}
+
+.card-body{
+    background: black;
+    opacity: 0.8;
+    margin:15px 10px;
+    color: white;
+}
+
+
+.itemCard h1,h3{
+    width: max-content;
+    overflow-wrap: anywhere;
+    
+}
+
+.carouselCard{
+    z-index: -1;
+}
+
+.imageSizing{
+    width: 100vh;
+    height: 100vb;
+}
+
+
+
+.carousel-caption{
+    bottom: 0.75rem;
+}

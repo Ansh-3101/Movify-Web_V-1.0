@@ -1,0 +1,36 @@
+.mainCard{
+    position: relative;
+    display: flex;
+    z-index: -1;
+}
+
+.cardImage img{
+    border: 2px solid white;
+    border-radius: 15px 15px 0px 0px;
+    height: 300px;
+    width: 200px;
+}
+
+#nameCard{
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+#itemName{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 100%;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carouselCard{
+    z-index: -1;
+}
+
+.imageSizing{
+    width: 400px;
+    height: 600px;
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="newItem.css">
+</head>
+
+<body>
+    <div id="carouselExampleInterval" class="carousel slide mainCard carousel-fade" data-bs-ride="carousel">
+        <div class="carouselItemCard" aria-hidden="true">
+            <img  id="cardImage" src="" class="card-img-top" alt="">
+            <div id="nameCard" class="card-body">
+              <div class="card-title">
+                <span id="itemName" ></span>
+              </div>
+              <div class="card-title">
+                <span id="itemDate"></span>
+              </div>
+              
+            </div>
+        </div>
+        <div class="carousel-inner carouselCard">
+            <div class="carousel-item active"  data-bs-interval="3000">
+                <img id="image1"  src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p1"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image2" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p2"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image3" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p3"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image4" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p4"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image5" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p5"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image6" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p6"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image7" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p7"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image8" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p8"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image9" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p9"></p>
+                            </div>
+              </div>
+              <div class="carousel-item"  data-bs-interval="3000">
+                <img id="image10" src="" class="d-block w-100 imageSizing" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p id="p10"></p>
+                            </div>
+              </div>
+        </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+    </div>
+
+    <div class="titleBar">
+        <div id="itemName">
+            <span id="title"></span>
+            <div class="dateTime">
+                <span id="date"></span> <span>|</span> <span id="duration"></span>
+            </div>
+        </div>
+        <div class="statistics">
+            <div class="ratingBar"><span>TMDB Rating</span><br>
+                <span class="fa fa-star checked"> <span id="itemRating"></span><br>
+                                    <span id="votes"></span>
+            </div>
+            <div class="popularityBar"><span>Popularity</span><br>
+                                    <span id="popularity"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="media">
+        <div class="poster">
+            <img id="posterImage" src="" alt="">
+        </div>
+
+        <div class="trailer">
+            <iframe id="itemTrailer" allowfullscreen
+            src="">
+            </iframe>
+        </div>
+
+    </div>
+    
+    <div id="main">  
+        <div class="leftMainColumn">
+        
+            <div class="metaData">
+                <div class="info">
+                    <div class="genres">
+                        <ul id="genresList" >
+                            
+                        </ul>
+                    </div>
+
+                    <div class="overviewBar">
+                        <span>Storyline</span>
+                        <p id="overView"></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="seasons" class="recommendations">
+                <span>Seasons</span>
+                <ul id="seasonsList">
+        
+                </ul>
+            </div>
+
+
+            <div class="castDiv">
+                <span>Top Cast</span>
+                <ul id="castList">
+                
+                </ul>
+            </div>
+
+            <div class="reviewDiv">
+                <span>Reviews</span>
+                <ul id="reviewsList">
+                </ul>
+            </div>
+
+            <div class="recommendations">
+                <span>Recommendations</span>
+                <ul id="recommendationsList">
+        
+                </ul>
+            </div>
+
+            <div class="recommendations">
+            <span>Similar TV Shows</span>
+            <ul id="similarList">
+
+                
+                
+            </ul>
+             </div>
+
+        </div>
+
+        <div class="rightMainColumn">
+            <div id="homePageButton" class="subHeading1">
+                <a href="" id="homePage">Official Homepage</a>
+            </div>
+
+            <div class="subHeading">Tagline</div>
+            <div id="tagline" class="subHeading2"></div>
+
+            <div class="subHeading">Created By</div>
+            <div id="creator" class="subHeading2"></div>
+
+            <div class="subHeading">Networks</div>
+            <div id="networks" class="subHeading2"></div>
+
+            <div class="subHeading">Status</div>
+            <div id="status" class="subHeading2"></div>
+
+            <div class="subHeading">Number of Seasons</div>
+            <div id="seasonsNumber" class="subHeading2"></div>
+
+            <div class="subHeading">Number of Episodes</div>
+            <div id="episodesNumber" class="subHeading2"></div>
+
+            <div class="subHeading">Original Language</div>
+            <div id="original_language" class="subHeading2"></div>
+
+
+            <div class="subHeading">Origin Country</div>
+            <div id="origin_country" class="subHeading2"></div>
+
+            <div class="subHeading">Type</div>
+            <div id="type" class="subHeading2"></div>
+
+            <div class="subHeading">Keywords</div>
+            <div id="keywords" class="subHeading2"></div>
+
+            <div class="subHeading">Available Languages</div>
+            <div id="languages" class="subHeading2"></div>
+
+            <div class="subHeading">Production Companies</div>
+            <div class="pcList subHeading2" id="company"></div>
+
+            <div class="subHeading">Production Countries</div>
+            <div class="pcList subHeading2" id="country"></div>
+
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+<script src="tv.js"></script>
+</html>

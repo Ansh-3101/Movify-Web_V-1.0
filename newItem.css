@@ -1,0 +1,1071 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+span{
+    color: #c2bfc3;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.titleBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+/* #itemImage ,#nameCard{
+} */
+
+#cardImage{
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+ #nameCard{
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+#itemName{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100%;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#title{
+    font-weight: 900;
+    font-size: xx-large;
+    color: #ffffff;
+}
+#popularity{
+    color: #ffffff;
+}
+
+.dateTime{
+    margin-top: 10px;
+}
+
+.statistics{
+    display: flex;
+    width: auto;
+    width: 70%;
+    justify-content: right;
+}
+
+
+.popularityBar{
+    display:inline-block;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+}
+.ratingBar{
+    display: inline-block;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+ 
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+}
+
+.ratingBar span{
+    color: #c2bfc3;
+}
+
+#itemRating{
+    color: white;
+    font-weight: 1000;
+}
+
+#votes{
+    color: #c2bfc3;
+    font-weight: bold;
+}
+
+.popularityBar span{
+    color: #c2bfc3;
+    font-weight: bold;
+}
+
+.media{
+    display: flex;
+    width: 100% -padding;
+    height: 80vh;
+    padding: 10px 40px;
+}
+
+.poster{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+}
+
+.trailer{
+    display: inline-block;
+    width: 75%;
+    height: 100%;
+    margin-left: 5px;
+}
+
+#itemTrailer{
+    width: 100%;
+    height: 100%;
+}
+
+
+#posterImage{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.leftMainColumn{
+    display: inline-block;
+    width: 70%;
+}
+
+.rightMainColumn{
+    display: inline-block;
+    width: 30%;
+    background-color: #032541;
+    border-radius: 10px;
+    margin: 10px 20px 20px 0px;
+}
+
+.metaData{
+    display: flex;
+    flex-direction: row;
+    width: 100%-padding;
+}
+
+#homePageButton{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(40, 186, 210);
+    border: 2px solid  rgb(40, 186, 210);
+}
+
+#homePageButton a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+}
+
+#homePage:visited{
+    color: white;
+    text-decoration: none;
+}
+
+#homePageButton:hover{
+    cursor: pointer;
+    background-color: rgb(3, 37, 65);
+}
+
+#keywords{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.keywordItem{
+    display: inline-block;
+    width: max-content;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    margin: 8px;
+    font-weight: 400;
+    background-color: rgb(16 16 16);
+}
+
+#networks{
+    display: block;
+}
+
+.networkItem{
+    display: block;
+    margin: 15px 3px;
+}
+
+.networkImage{
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    max-width: 260px;
+    max-height: 30px;
+}
+
+.pcList{
+    display: block;
+}
+
+.pcItem{
+    display: block;
+    font-size: medium;
+    font-weight: 400;
+}
+
+
+.info{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    background-color: #032541;
+    border-radius: 10px;
+}
+
+.genres{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+
+.genres ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.genres ul li{
+    list-style: none;
+    border: 1.5px solid rgb(114, 109, 120);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin-right: 10px;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+.overviewBar{
+    display: inline-block;
+    
+}
+
+.overviewBar span{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#overview{
+    width: 100%;
+}
+
+.providers{
+  display: block;
+  width: 40%;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+#watchProviders{
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 40%;
+    padding: 5px 10px;
+}
+
+.castMain{
+    display:block;
+    border: 2px solid grey;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 20px;
+    
+}
+
+.castDiv{
+    padding:20px;
+    margin: 20px;
+    display: block;
+    background-color: #032541;
+    border-radius: 10px;
+}
+
+.castDiv span{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 10px;
+    
+}
+
+.castImage{
+    width: 160px;
+    height: 200px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.castInfo{
+    padding: 10px;
+    color: black;
+}
+
+.castName{
+    color: #ffffff;
+    font-weight: bold;
+}
+.characterName{
+    color: #ffffff;
+    padding-top: 5px;
+}
+
+#castList{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    list-style: none;
+    margin-right: 10px;
+    padding-top: 30px;
+}
+
+
+
+#castList::-webkit-scrollbar{
+    display: none;
+}
+
+#crewList{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    list-style: none;
+    margin-right: 10px;
+    padding-top: 30px;
+}
+
+#crewList::-webkit-scrollbar{
+    display: none;
+}
+
+
+.recommendations{
+    display: block;
+    padding:20px;
+    margin: 20px;
+    background-color: #032541;
+    border-radius: 10px;
+}
+
+.recommendations span{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    margin: 15px;
+}
+
+#recommendationsList{
+    display: flex;
+    flex-direction:row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+ #collections{
+    background-color: #032541;
+    border-radius: 10px;
+    padding:20px;
+    margin: 20px;
+ }
+
+ #collectionItem{
+    margin: 20px;
+ }
+
+
+ #collections span{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    margin: 15px;
+    margin-bottom: 10px;
+}
+
+#seasonsList{
+    display: flex;
+    flex-direction:row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+#seasonsList::-webkit-scrollbar{
+    display: none;
+}
+
+#similarList{
+    display: flex;
+    flex-direction:row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+#recommendationsList::-webkit-scrollbar{
+    display: none;
+}
+
+#similarList::-webkit-scrollbar{
+    display: none;
+}
+
+.recommendationItem{
+    display: flex;
+    padding: 20px 10px;
+    list-style: none;
+}
+
+.itemCard{
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 15px;
+    transition: transform .37s;
+}
+
+.itemCard:hover{
+    border: 2px solid red;
+    transform: scale(1.07);
+}
+
+.cardImage img{
+    border-radius: 15px 15px 0px 0px;
+    height: 300px;
+    width: 200px;
+}
+#rating{
+    color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.fa-star:before {
+    content: "\f005";
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* #itemName text{
+    display: block;
+    font-weight:bold;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+} */
+
+#releaseDate{
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+
+.recommendationInfo{
+    display: inline-block;
+    margin: 10px;
+}
+.info h5,h6{
+    padding: 5px 5px;
+}
+
+
+
+.productionInfo{
+    display: flex;
+    padding: 10px;
+    height: 50vh;
+    max-height: 60vh;
+    background-color: #032541;
+    border-radius: 10px;
+    padding:20px;
+    margin: 10px 20px;
+    padding-left: 20px;
+}
+
+.productionCompanies{
+    display: inline-block;
+    width: 65%;
+    height: 100%;
+    /* border: 2px solid red; */
+
+}
+
+.productionCompanies span{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.spoken_languages{
+    display: inline-block;
+    /* text-align: center; */
+    /* border: 2px solid green; */
+    margin-left: 40px;
+    width: 30%;
+    height: 90%;
+}
+
+.spoken_languages span{
+    color: white;
+}
+.productionCard{
+    display: block;
+    height: 100%;
+    width: 100% -padding;
+    overflow-y: auto;
+    
+}
+#productionList{
+    display: block;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 100%;
+}
+
+#productionList::-webkit-scrollbar{
+    display: none;
+}
+
+#productionList li{
+    list-style: none;
+}
+
+.productionItem{
+    display: flex;
+    align-items: center;
+    margin-top: 10px; 
+    opacity: 0.9;
+    list-style: none;
+}
+
+.imageSizing{
+    width: 400px;
+    height: 600px;
+}
+.productionLogo{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 85px;
+    background-color: white;
+}
+
+.logoImage{
+    display: inline-block;
+    width: 150px;
+    height: 60px;
+    
+}
+
+.productionData{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#productionName{
+    display: block;
+}
+
+#productionOrigin{
+    display: block;
+}
+
+#languageList{
+    overflow-y: auto;
+    height: auto;
+    max-height: 80%;
+}
+
+#languageList li{
+    list-style: none;
+}
+
+.checked{
+    color: orange;
+    width: auto;
+}
+
+
+.carouselItemCard{
+    border: 0px solid;
+    height: 400px;
+    display: grid;
+    margin-top: 72px;
+    margin-left: 130px;
+    grid-template-columns: 320px auto;
+    align-items: flex-end;
+    position: absolute;
+    width: max-content;
+    overflow-wrap: anywhere;
+   
+}
+
+.mainCard{
+    position: relative;
+    display: flex;
+    z-index: -1;
+}
+
+.card-body{
+    background: black;
+    opacity: 0.8;
+    margin:15px 10px;
+    padding: 5px 15px;
+    padding-right: 40px;
+    display: block;
+    color: white;
+}
+
+
+.carouselItemCard{
+    width: max-content;
+    overflow-wrap: anywhere;
+}
+
+
+.carouselCard{
+    z-index: -1;
+}
+
+.reviewDiv{
+    height: 60vh;
+    width: 100%-padding;
+    padding:20px;
+    margin: 20px;
+    background-color: #032541;
+    border-radius: 10px;
+}
+
+.reviewDiv span{
+ font-size: 1.5rem;
+ color: white;
+ font-weight: bold;
+ margin: 10px 20px;
+}
+
+#reviewsList{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 10px;
+    margin-left: 10px;
+    height: 90%;
+    width: auto;
+}
+
+#reviewsList::-webkit-scrollbar{
+    display: none;
+}
+
+#reviewsList li{
+    list-style: none;
+}
+
+
+.reviewCard{
+    display: block;
+    list-style: none;
+    /* border: 2px solid white; */
+    background-color: rgb(22, 21, 21);
+    border-radius: 10px;
+    margin-right: 10px;
+    height: 100%;
+    width: 35vw;
+}
+
+#reviewerImage{
+    display: inline-block;
+    width: 5%;
+    height: 5%;
+    margin: 10px;
+}
+
+#reviewerName{
+    font-size: 1rem;
+    display: inline-block;
+}
+
+#review{
+    display: block;
+    height: 70%;
+    width: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+#reviewRating{
+    font-size: small;
+    display: contents;
+}
+
+#review::-webkit-scrollbar{
+    display: none;
+}
+
+.episodesDiv{
+    display: block;
+}
+
+.episodeItem{
+    list-style: none;
+}
+
+#episodesList{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    gap: 20px;
+}
+
+.episodeCard{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 45vw;
+    height: 90%;  
+    padding: 5px; 
+}
+.anchor{
+    text-decoration: none;
+    color: white;
+}
+
+
+.episodeImage{
+    display: inline-block;
+    /* width: 100%;
+    height: 100%; */
+    /* aspect-ratio: 1.78; */
+}
+
+.episodeImage img{
+    width: 13rem;
+    /* height: 150px; */
+    aspect-ratio: 1.78;
+}
+
+#episodeMetrics{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 5px;
+}
+
+#headingSpan{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+#episodeAirDate{
+    display: inline-block;
+    font-size: medium;
+    color: wheat;
+    grid-column: 3;
+    margin-right: 10px;
+    justify-self: flex-end;
+    
+}
+
+.episodeInfo{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+#episodeRating{
+    justify-self: flex-start;
+}
+
+#episodeOverview p{
+    display: block;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    margin: 10px;
+    height: 15vh;
+}
+
+#episodeName{
+    display: inline-block;
+    white-space: nowrap;
+    margin: 5px 10px;
+}
+
+.nameTime{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+#episodeDuration{
+    display: inline-block;
+    justify-self: flex-end;
+    margin: 5px;
+}
+
+#episodeNumber, #episodeTitle{
+    font-weight: bold;
+    font-size:x-large;
+    color: #ffffff;
+}
+
+.episodeImage{
+    height: auto;
+    width: auto;
+}
+
+.titleDiv{
+    margin: 10vh 3vw;
+}
+
+.number_revenue{
+    margin: 7vh 3vw;
+    font-weight: bold;
+    font-size: large;
+}
+
+.moviesDiv{
+    display: block;
+    width: 100%-padding;
+}
+
+#moviesList a{
+    text-decoration: none;
+}
+
+#moviesList{
+    display: block;
+}
+
+.movieItem{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(31, 28, 28);
+    /* border: 2px solid white; */
+    border-radius: 5px;
+    width: 100%;
+    height: 150px;
+    margin: 15px 0px;
+    
+}
+
+#movieImage{
+    display: inline-block;
+}
+
+.movieInfo{
+    display: inline-block;
+    padding: 10px;
+}
+
+#overview{
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    overflow-y: hidden; 
+    text-overflow: hidden;
+}
+
+#movieDate{
+    display: block;
+    font-weight: normal;
+    color: rgb(180, 180, 180);
+    font-size:medium ;
+}
+
+#movieName{
+    display: block;
+    font-size: 1.3rem;
+}
+
+#movieImage{
+    display: inline-block;
+}
+
+#movieImage img{
+    height: 100%;
+    width: 94px;
+}
+
+#movieName:hover{
+    color: #01b4e4;
+}
+
+.mainCastDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.leftColumn{
+    display: block;
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px 10px;
+    align-items: center;
+}
+
+.rightColumn{
+    display: block;
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+#personImage{
+    max-width: 300px;
+    max-height: 450px;
+    margin: 10px 40px;
+    border-radius: 5px;
+}
+
+#castName{
+    font-weight: bolder;
+    font-size: 2rem;
+    color: white;
+    margin: 10px;
+}
+
+.subHeading{
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+#biography{
+    font-weight: normal;
+    color: white;
+    font-size: 0.9rem;
+    margin: 10px;
+}
+
+#tvList{
+    display: flex;
+    flex-direction:row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+#creditList{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    /* overflow-x: scroll;
+    scroll-behavior: smooth; */
+}
+
+#crewList::-webkit-scrollbar{
+    display: none;
+}
+
+#tvList::-webkit-scrollbar{
+    display: none;
+}
+
+.subHeading1{
+    display: block;
+    font-size: 1rem;
+    color: white;
+    font-weight:500;
+    margin: 0px 10px;
+    margin-top: 30px;
+}
+
+.subHeading2{
+    display: block;
+    font-size: 1rem;
+    color: white;
+    font-weight:300;
+    margin: 0px 10px;
+}
+
+.personInfo{
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0px 10px;
+    color: white;
+}
+
+#castProfile{
+    max-width: 150px;
+    max-height: 250px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#photoList{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    list-style: none; 
+}
+
+#photoList::-webkit-scrollbar{
+    display: none;
+}
