@@ -2,10 +2,40 @@
     margin: 0px;
     padding: 0px;
 }
+:root{
+--scrollTrack: #01203b;
+--scrollThumb: rgb(0, 68, 124);
+--scrollHover: rgb(0, 81, 148);
+--homeBtn: rgb(40, 186, 210);
+--item:transparent;
 
-body::-webkit-scrollbar{
-    display: none;
 }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:var(--scrollTrack);
+    border-radius: 5px;
+}
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollThumb);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollHover);
+  }
+
+  
 
 span{
     color: #c2bfc3;
@@ -23,20 +53,91 @@ body{
     padding: 10px 40px;
 }
 
-/* #itemImage ,#nameCard{
-} */
+
+
+#itemImage{
+    border-radius: 5px 5px 0px 0px;
+    width: 200px;
+    height: 300px;
+}
 
 #cardImage{
-    border: 2px solid white;
+    /* border: 2px solid white; */
+    border-radius: 8px;
+    width: 23vw;
+    height: 34.5vw;
+}
+
+.skeleton{
+    width: 23vw;
+    height: 34.5vw;
+    /* opacity: 0.7; */
+    animation: skeleton-loading 0.6s linear infinite alternate;
+}
+
+.castImageSkeleton{
+    animation: skeleton-loading 0.6s linear infinite alternate;
+}
+
+.itemSkeleton{
+    width: 200px;
+    height: 300px;
+    animation: skeleton-loading 0.6s linear infinite alternate;
+
+}
+
+
+
+
+
+.carouselSkeleton{
+    animation: skeleton-loading 0.6s linear infinite alternate;
+}
+
+@keyframes skeleton-loading{
+    0%{
+        background-color: rgb(160, 160, 160);
+    }
+    20%{
+        background-color: rgb(150, 150, 150);
+    }
+    40%{
+        background-color: rgb(130, 130, 130);
+    }
+    60%{
+        background-color: rgb(130, 130, 130);
+    }
+    80%{
+        background-color: rgb(150, 150, 150);
+    }
+    100%{
+        background-color: rgb(160, 160, 160);
+    }
+    
+}
+
+    
+
+ #nameCard{
+    /* border: 2px solid white; */
     border-radius: 8px;
 }
 
- #nameCard{
-    border: 2px solid white;
-    border-radius: 8px;
+#carouselBtn{
+    display: none;
 }
 
 #itemName{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 2vw;
+    width: 100%;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#itemName1{
     display: inline-block;
     font-weight: bold;
     font-size: 1rem;
@@ -46,10 +147,29 @@ body{
     text-overflow: ellipsis;
 }
 
+#creditItemName{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100%;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#type{
+    font-size: 0.8rem;
+}
+
+#itemDate{
+    font-size: 1.2vw;
+}
+
 #title{
     font-weight: 900;
     font-size: xx-large;
     color: #ffffff;
+    display: block;
 }
 #popularity{
     color: #ffffff;
@@ -107,19 +227,31 @@ body{
 
 .media{
     display: flex;
-    width: 100% -padding;
-    height: 80vh;
+    width: 100%;
+    height: 40vw;
+    margin-top: 20px;
+    padding: 10px 40px;
+}
+
+.episodeMedia{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
     padding: 10px 40px;
 }
 
 .poster{
-    display: inline-block;
-    width: 25%;
+    display: block;
+    width: auto;
     height: 100%;
+    margin: auto;
 }
 
 .trailer{
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 75%;
     height: 100%;
     margin-left: 5px;
@@ -127,12 +259,13 @@ body{
 
 #itemTrailer{
     width: 100%;
+    min-height: 35vw;
     height: 100%;
 }
 
 
 #posterImage{
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
@@ -167,8 +300,9 @@ body{
     padding: 10px;
     text-align: center;
     border-radius: 10px;
-    background-color: rgb(40, 186, 210);
-    border: 2px solid  rgb(40, 186, 210);
+    background-color: rgb(0, 68, 124);
+    transition: 0.15s;
+    /* border: 2px solid  rgb(40, 186, 210); */
 }
 
 #homePageButton a{
@@ -185,7 +319,9 @@ body{
 
 #homePageButton:hover{
     cursor: pointer;
-    background-color: rgb(3, 37, 65);
+    background-color: var(--homeBtn);
+    transform: scale(1.008);
+    opacity: 0.9;
 }
 
 #keywords{
@@ -203,7 +339,7 @@ body{
     color: white;
     margin: 8px;
     font-weight: 400;
-    background-color: rgb(16 16 16);
+    background-color:var(--item);
 }
 
 #networks{
@@ -238,7 +374,7 @@ body{
 
 .info{
     display: block;
-    width: 100%;
+    width: -webkit-fill-available;
     height: auto;
     margin: 10px 20px;
     padding: 10px 20px;
@@ -259,16 +395,26 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+#genresList{
+    width: 100%;
 }
 
 .genres ul li{
     list-style: none;
-    border: 1.5px solid rgb(114, 109, 120);
+    /* border: 1.5px solid rgb(114, 109, 120); */
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: auto;
+    display: block;
+    width: max-content;
     margin-right: 10px;
+    background-color: var(--item);
     padding: 3px 10px;
     border-radius: 15px;
 }
@@ -305,10 +451,16 @@ body{
 
 .castMain{
     display:block;
-    border: 2px solid grey;
-    border-radius: 10px;
+    /* border: 2px solid grey; */
+    border-radius: 5px;
     text-decoration: none;
     margin-right: 20px;
+    transition: 0.2s;
+}
+
+.castMain:hover{
+    opacity: 0.75;
+    transform: scale(1.012);
     
 }
 
@@ -331,7 +483,7 @@ body{
 .castImage{
     width: 160px;
     height: 200px;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .castInfo{
@@ -339,10 +491,17 @@ body{
     color: black;
 }
 
+
 .castName{
     color: #ffffff;
     font-weight: bold;
+    font-size: 1rem;
 }
+
+#castName1{
+    display: none;
+}
+
 .characterName{
     color: #ffffff;
     padding-top: 5px;
@@ -351,7 +510,7 @@ body{
 #castList{
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: smooth;
     overflow-y: hidden;
     list-style: none;
@@ -361,14 +520,11 @@ body{
 
 
 
-#castList::-webkit-scrollbar{
-    display: none;
-}
 
 #crewList{
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: smooth;
     overflow-y: hidden;
     list-style: none;
@@ -376,9 +532,6 @@ body{
     padding-top: 30px;
 }
 
-#crewList::-webkit-scrollbar{
-    display: none;
-}
 
 
 .recommendations{
@@ -399,10 +552,34 @@ body{
 #recommendationsList{
     display: flex;
     flex-direction:row;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: smooth;
     margin: 0px 10px;
     padding: 0px;
+}
+
+.collectionCard{
+    display: flex;
+    /* background-color:#001a30; */
+    border-radius: 15px;
+    transition: transform .37s;
+    width: 100%;
+}
+
+.collectionInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.collectionInfo div{
+    margin: 5px;
+}
+
+.collectionImage{
+    width: 150px;
+    height: 200px;
+    border-radius: 8px 8px 8px 8px;
+    margin: 10px;
 }
 
  #collections{
@@ -414,6 +591,13 @@ body{
 
  #collectionItem{
     margin: 20px;
+    border-radius: 15px;
+    transition: 0.2s;
+ }
+
+ #collectionItem:hover{
+    opacity: 0.85;
+    transform: scale(1.005);
  }
 
 
@@ -425,16 +609,23 @@ body{
     margin-bottom: 10px;
 }
 
+#description{
+    font-weight: bold;
+    font-size: medium;
+}
+
+#collectionName{
+    font-size: large;
+    font-weight: bold;
+}
+
 #seasonsList{
     display: flex;
     flex-direction:row;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: smooth;
 }
 
-#seasonsList::-webkit-scrollbar{
-    display: none;
-}
 
 #similarList{
     display: flex;
@@ -445,13 +636,7 @@ body{
     padding: 0px;
 }
 
-#recommendationsList::-webkit-scrollbar{
-    display: none;
-}
 
-#similarList::-webkit-scrollbar{
-    display: none;
-}
 
 .recommendationItem{
     display: flex;
@@ -461,25 +646,27 @@ body{
 
 .itemCard{
     display: inline-block;
-    border: 2px solid white;
-    border-radius: 15px;
-    transition: transform .37s;
+    /* border: 2px solid white; */
+    border-radius: 5px;
+    transition: transform .30s;
 }
 
 .itemCard:hover{
-    border: 2px solid red;
-    transform: scale(1.07);
+    opacity: 0.8;
+    transform: scale(1.02);
 }
 
 .cardImage img{
     border-radius: 15px 15px 0px 0px;
     height: 300px;
-    width: 200px;
+    width: 100%;
 }
+
 #rating{
     color: #ffffff;
     margin: 0px;
     padding: 0px;
+    font-size: medium;
 }
 
 .fa-star:before {
@@ -511,7 +698,7 @@ body{
 }
 
 .recommendationInfo{
-    display: inline-block;
+    display: block;
     margin: 10px;
 }
 .info h5,h6{
@@ -573,9 +760,7 @@ body{
     max-height: 100%;
 }
 
-#productionList::-webkit-scrollbar{
-    display: none;
-}
+
 
 #productionList li{
     list-style: none;
@@ -591,7 +776,7 @@ body{
 
 .imageSizing{
     width: 400px;
-    height: 600px;
+    height: 50vw;
 }
 .productionLogo{
     display: inline-block;
@@ -639,15 +824,14 @@ body{
 
 
 .carouselItemCard{
-    border: 0px solid;
-    height: 400px;
     display: grid;
-    margin-top: 72px;
-    margin-left: 130px;
-    grid-template-columns: 320px auto;
+    margin: 5vw;
+    grid-template-columns: 25vw auto;
     align-items: flex-end;
     position: absolute;
-    width: max-content;
+    width: auto;
+    border: 0px solid;
+    height: auto;
     overflow-wrap: anywhere;
    
 }
@@ -656,6 +840,12 @@ body{
     position: relative;
     display: flex;
     z-index: -1;
+    width: auto;
+    height: 50vw;
+}
+
+#controlBtn{
+    display: none;
 }
 
 .card-body{
@@ -680,7 +870,7 @@ body{
 }
 
 .reviewDiv{
-    height: 60vh;
+    height: 25vw;
     width: 100%-padding;
     padding:20px;
     margin: 20px;
@@ -698,7 +888,7 @@ body{
 #reviewsList{
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px;
     margin-left: 10px;
@@ -706,9 +896,6 @@ body{
     width: auto;
 }
 
-#reviewsList::-webkit-scrollbar{
-    display: none;
-}
 
 #reviewsList li{
     list-style: none;
@@ -719,11 +906,16 @@ body{
     display: block;
     list-style: none;
     /* border: 2px solid white; */
-    background-color: rgb(22, 21, 21);
+    background-color: var(--item);
     border-radius: 10px;
     margin-right: 10px;
     height: 100%;
     width: 35vw;
+}
+
+.reviewerInfo{
+    display: flex;
+    flex-direction: row;
 }
 
 #reviewerImage{
@@ -750,12 +942,9 @@ body{
 
 #reviewRating{
     font-size: small;
-    display: contents;
+    justify-self: flex-end;
 }
 
-#review::-webkit-scrollbar{
-    display: none;
-}
 
 .episodesDiv{
     display: block;
@@ -766,10 +955,14 @@ body{
 }
 
 #episodesList{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 20px;
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: repeat(3,1fr); */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+        /* grid-gap: 20px;
+        gap: 20px; */
 }
 
 .episodeCard{
@@ -777,8 +970,9 @@ body{
     flex-direction: row;
     border: 2px solid white;
     border-radius: 10px;
-    width: 45vw;
-    height: 90%;  
+    width: 420px;
+    margin: 10px;
+    height: 88%;  
     padding: 5px; 
 }
 .anchor{
@@ -795,15 +989,17 @@ body{
 }
 
 .episodeImage img{
-    width: 13rem;
-    /* height: 150px; */
-    aspect-ratio: 1.78;
+    width: 225px;
+    height: 126px;
+    border-radius: 5px;
 }
 
 #episodeMetrics{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin: 5px;
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+    display: block;
+    margin: 10px;
+    font-size: 0.8rem;
 }
 
 #headingSpan{
@@ -816,10 +1012,10 @@ body{
 
 #episodeAirDate{
     display: inline-block;
-    font-size: medium;
-    color: wheat;
+    font-size: 0.8rem;
+    color: white;
     grid-column: 3;
-    margin-right: 10px;
+    margin-left: 10px;
     justify-self: flex-end;
     
 }
@@ -837,17 +1033,17 @@ body{
 #episodeOverview p{
     display: block;
     white-space: wrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow-x: auto;
     font-size: 0.9rem;
-    margin: 10px;
-    height: 15vh;
+    margin: 0px 10px;
+    height: 60px;
 }
 
 #episodeName{
-    display: inline-block;
-    white-space: nowrap;
-    margin: 5px 10px;
+    display: block;
+    overflow-x: hidden;
+    margin: 0px 10px;
+    font-weight: bold;
 }
 
 .nameTime{
@@ -857,14 +1053,24 @@ body{
 }
 
 #episodeDuration{
-    display: inline-block;
+    display: block;
     justify-self: flex-end;
-    margin: 5px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+#ratingSpan{
+    display: block;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: auto;
+    color: rgb(196, 196, 196);
 }
 
 #episodeNumber, #episodeTitle{
     font-weight: bold;
-    font-size:x-large;
+    font-size: xx-large;
     color: #ffffff;
 }
 
@@ -874,7 +1080,11 @@ body{
 }
 
 .titleDiv{
-    margin: 10vh 3vw;
+    /* margin: 10vh 3vw; */
+    display: block;
+    width: 100-padding;
+    margin: 20px;
+    font-size: 1rem;
 }
 
 .number_revenue{
@@ -899,7 +1109,7 @@ body{
 .movieItem{
     display: flex;
     flex-direction: row;
-    background-color: rgb(31, 28, 28);
+    background-color: var(--item);
     /* border: 2px solid white; */
     border-radius: 5px;
     width: 100%;
@@ -943,7 +1153,8 @@ body{
 
 #movieImage img{
     height: 100%;
-    width: 94px;
+    width: 100px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 #movieName:hover{
@@ -973,9 +1184,9 @@ body{
 }
 
 #personImage{
-    max-width: 300px;
-    max-height: 450px;
-    margin: 10px 40px;
+    width: 90%;
+    margin: 20px;
+    height: auto;
     border-radius: 5px;
 }
 
@@ -993,6 +1204,13 @@ body{
     font-weight: 500;
     margin: 10px;
     margin-top: 30px;
+}
+
+#otherNamesList{
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    margin: 30px 10px;
 }
 
 #biography{
@@ -1017,13 +1235,6 @@ body{
     scroll-behavior: smooth; */
 }
 
-#crewList::-webkit-scrollbar{
-    display: none;
-}
-
-#tvList::-webkit-scrollbar{
-    display: none;
-}
 
 .subHeading1{
     display: block;
@@ -1050,6 +1261,13 @@ body{
     color: white;
 }
 
+.tempHeading{
+    font-size: large;
+    font-weight: 500;
+    margin: 10px;
+    margin-top: 30px;
+}
+
 #castProfile{
     max-width: 150px;
     max-height: 250px;
@@ -1060,12 +1278,436 @@ body{
 #photoList{
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: smooth;
     overflow-y: hidden;
     list-style: none; 
 }
 
-#photoList::-webkit-scrollbar{
-    display: none;
+
+
+
+@media screen and (max-width: 700px){
+    .itemSkeleton{
+        width: 145px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .mainCastDiv{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #personImage{
+        margin: 10px 20px;
+    }
+
+    #castName1{
+        display: block;
+        font-weight: bolder;
+        font-size: 2rem;
+        color: white;
+        margin: 10px;
+        text-align: center;
+    }
+
+    #castName{
+        display: none;
+    }
+
+    .leftColumn{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+
+    .rightColumn{
+        display: block;
+        width: 100%;
+    }
+
+    .personalInfo{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .subHeading1{
+       grid-column-start: 1;
+       grid-column-end: 2;
+       align-self: center;
+       margin-top: 15px;
+       height: auto;
+    }
+
+    .personInfo{
+        display: inline-block;
+        align-self: center;
+        margin-top: 15px;
+        height: auto;
+    }
+
+    #otherNamesList{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 200%;
+        font-size: 1rem;
+        color: white;
+        font-weight: 500;
+        margin: 0px 10px;
+    }
+
+    .tempHeading{
+        margin: 10px;
+        margin-top: 30px;
+        font-size: large;
+        font-weight: 500;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+
+    .itemCard{
+        width: 150px;
+        max-height: auto;
+    }
+
+    #itemImage{
+        border-radius: 5px 5px 0px 0px;
+        width: 145px;
+        height: 218px;
+    }
+
+
+    #itemName{
+        font-size: 0.8rem;
+    }
+
+    #collectionName{
+        font-size: large;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    #rating{
+        font-size: 0.8rem;
+    }
+
+
+    #releaseDate , #type{
+        font-size: 0.7rem;
+    }
+
+    .media{
+        display: block;
+        height: auto;
+        padding: 10px;
+    }
+
+    .titleBar{
+        padding: 10px;
+    }
+
+    .trailer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0px;
+        margin-top: 20px;
+    }
+    
+    
+
+    #episodesList{
+        display: block;
+    }
+
+    .episodeCard{
+        display: flex;
+    }
+
+    .episodeImage img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    /* Movies Page */
+    #carouselBtn{
+        display: block;
+    }
+
+    .carouselItemCard{
+        display: none;
+    }
+
+
+    .imageSizing{
+        height: 60vw;
+    }
+
+    #title{
+        font-size: x-large;
+        font-weight: 800;
+        display: block;
+    }
+
+    .ratingBar span{
+        font-size: 1rem;
+    }
+
+    .popularityBar span{
+        font-size: 1rem;
+    }
+
+    #itemTrailer{
+        width: 100%;
+        min-height: 50vw;
+        height: 100%;
+    }
+
+    #posterImage{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    #main{
+        flex-direction: column-reverse;
+    }
+
+    .rightMainColumn{
+        display: grid;
+        width: auto;
+        margin: 10px;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #homePageButton{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .subHeading{
+        display: inline-block;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .subHeading2{
+        margin-top: 30px;
+    }
+
+    #keywords ,#languages , #company ,#country ,#languageTitle{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 10px;
+    }
+
+
+    .leftMainColumn{
+        display: block;
+        width: 100%;
+    }
+
+    .info{
+        margin: 10px;
+        font-size: 3.5vw;
+    }
+
+    #collections{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #collectionItem{
+        margin: 10px;
+    }
+
+    .collectionCard{
+        display: block;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #description{
+        font-size: medium;
+    }
+
+    .collectionImage{
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: -10px;
+        margin-top: 0px;
+    }
+
+    .collectionInfo{
+        margin: 0px -5px;
+    }
+
+    .castDiv{
+        display: grid;
+        grid-template-rows: 1fr;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #castList{
+        display: grid;
+        grid-template-columns: repeat(40,1fr);
+        grid-row-gap: 10px;
+        margin: 0px;
+        padding-left: 0px;
+
+    }
+
+    .castImage{
+        width: 120px;
+        height: 180px;
+    }
+
+    .castName , .characterName{
+        font-size: 0.7rem
+
+    }
+
+    .reviewDiv{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .recommendations{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .reviewCard{
+        width: 70vw;
+        
+    }
+
+    .pcItem{
+        margin-top: 10px;
+        font-weight: 400;
+        color: rgb(255, 244, 222);
+    }
+
+    .reviewerInfo{
+        display: block;
+    }
+
+    #review{
+        font-size: 3vw;
+        height: 50%;
+        width: 100%;
+    }
+
+    .reviewDiv{
+        height: 70vw;
+    }
+
+    #reviewerName , #reviewRating{
+        font-size: 3vw;
+        margin: 10px;
+    }
+
+    #reviewerImage{
+        margin-left: 20px;
+    }
+
+    .mainCard{
+        z-index: 1;
+    }
+
+    #controlBtn{
+        display: block;
+        margin: 0px;
+    }
+
+    /* Collection */
+    #movieName{
+        font-size: 1rem;
+    }
+    #movieDate{
+        font-size: 0.8rem;
+    }
+
+    #overview{
+        font-size: 0.8rem;
+        height: 60%;
+        overflow-y: auto;
+    }
+
+
+    /* Season Page */
+
+    #episodesList{
+        padding: 5px;
+    }
+
+    #episodeMetrics{
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+    }
+
+
+    .episodeCard{
+        flex-direction: column;
+        width: auto;
+        margin: 20px 10px;
+    }
+
+    .episodeItem{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #episodePoster{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    #episodeOverview{
+        display: none;
+    }
+
+    #headingSpan{
+        margin: 10px;
+    }
+
+    .episodeInfo{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    
+    .nameRating{
+        display: block;
+        max-width: 45vw;
+    }
+    
+    .dateDuration{
+        display: inline-block;
+        width: max-content;
+        margin-left: auto;
+        margin-right: 10px;
+        align-self: flex-end;
+        text-align: end;
+    }
+
+    #episodeDuration{
+        font-size: 0.8rem;
+    }
+
+    #episodeNumber, #episodeTitle{
+        font-size: 1rem;
+    }
+
+
 }

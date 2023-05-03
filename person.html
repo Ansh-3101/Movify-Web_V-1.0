@@ -10,49 +10,47 @@
     <link rel="stylesheet" href="newItem.css">
 </head>
 <body>
-    <!-- <div id="carouselExampleInterval" class="carousel slide mainCard carousel-fade" data-bs-ride="carousel">
-        <div class="carouselItemCard" aria-hidden="true">
-        <img  id="cardImage" src="" class="card-img-top" alt="">
-        <div id="nameCard" class="card-body">
-          <div class="card-title">
-            <span id="itemName" ></span>
-          </div>
-          <div class="card-title">
-            <span id="itemDate"></span>
-          </div>
-          
-        </div>
-    </div> -->
+    
 
     <div class="mainCastDiv">
-        <div class="leftColumn">
-            <img  id="personImage" src="" class="card-img-top" alt="">
+
+        <div class="leftColumn" id="leftColumn">
+            <img  id="personImage" src="" class="card-img-top skeleton" alt="">
+            <div id="castName1"></div>
             <div class="personalInfo">
                 <div class="subHeading">Personal Info </div>
-                <div class="subHeading1">Known For</div>
+
+                <div class="subHeading1" id="knownForHeading">Known For</div>
                 <div id="knownFor" class="personInfo"></div>
-                <div class="subHeading1">Known Credits</div>
+
+                <div class="subHeading1"id="creditsCountHeading">Known Credits</div>
                 <div id="creditsCount" class="personInfo"></div>
-                <div class="subHeading1">Popularity</div>
+
+                <div class="subHeading1" id="popularityHeading">Popularity</div>
                 <div id="popularity" class="personInfo"></div>
-                <div class="subHeading1">Gender</div>
+
+                <div class="subHeading1" id="genderHeading">Gender</div>
                 <div id="gender" class="personInfo"></div>
-                <div class="subHeading1">Birthday</div>
+
+                <div class="subHeading1" id="birthdayHeading">Birthday</div>
                 <div id="birthday" class="personInfo"></div>
-                <div class="subHeading1">Place of Birth</div>
+
+                <div class="subHeading1" id="birthPlaceHeading">Place of Birth</div>
                 <div id="birthPlace" class="personInfo"></div>
-                <div class="subHeading1" id="otherNamesList">Also Known As</div>
+
+                <div class="tempHeading" id="otherNamesListHeading">Also Known As</div>
+                <div id="otherNamesList"></div>
                 
             </div>
         </div>
-        <div class="rightColumn">
+        <div class="rightColumn" id="rightColumn">
             <div id="castName"></div>
-            <div class="subHeading">Biography</div>
+            <div class="subHeading" id="biographyHeading">Biography</div>
             <div id="biography"></div>
 
-            <div class="subHeading">Photos</div>
+            <div class="subHeading" id="photosHeading">Photos</div>
             <div id="photoList"></div>
-            <div class="filmography">
+            <div class="filmography" id="filmography">
                 <div class="subHeading">Worked In</div>
                 <div id="creditList"></div>
             </div>
