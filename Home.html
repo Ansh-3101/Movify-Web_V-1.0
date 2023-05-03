@@ -15,21 +15,11 @@
         <div id="title">
             Movify
         </div>
-        <!-- <div class="navDiv"> -->
-            
-            <!-- <div id="navbar">
-                <ul>
-                    <li  onclick="home()">Home</li>
-                    <li>TV Shows</li>
-                    <li>Movies</li>
-                    <li>Watchlist</li>
-                </ul>
-            </div> -->
-        <!-- </div> -->
+        
         <div id="searchBar">
 
             <form  id="searchForm" >
-                <input id="searchText" onblur="hideSearchList()" oninput="getSearchResults()" onsubmit="getSearchResults()" type="text" placeholder="Search Here">
+                <input id="searchText" onblur="hideSearchList()" oninput="getSearchResults()" onfocus="getSearchResults()" onsubmit="getSearchResults()" type="text" placeholder="Search Here">
             </form>
         </div>
 
@@ -37,12 +27,13 @@
             <div class="searchContent">
                 <div id="searchHeading">
                     Search Results
+                    <div id="closeBtn">Close</div>
                 </div>
                 <div class="searchContentTypes">
-                    <div class="contentType" id="movies" onclick="onclickMovies()">Movies <div class="count" id="movieCount"></div></div>
-                    <div class="contentType" id="tv" onclick="onclickTV()" >TV Shows<div class="count" id="TVCount"></div></div>
-                    <div class="contentType" id="person" onclick="onclickPersons()">People <div class="count" id="personCount"></div></div>
-                    <div class="contentType" id="collection" onclick="onclickCollections()">Collections <div class="count" id="collectionCount"></div></div>
+                    <div class="contentType" id="movies" onclick="onclickMovies()"><span> Movies </span> <div class="count" id="movieCount"></div></div>
+                    <div class="contentType" id="tv" onclick="onclickTV()" ><span> TV Shows </span><div class="count" id="TVCount"></div></div>
+                    <div class="contentType" id="person" onclick="onclickPersons()"><span> People </span> <div class="count" id="personCount"></div></div>
+                    <div class="contentType" id="collection" onclick="onclickCollections()"><span> Collections </span> <div class="count" id="collectionCount"></div></div>
                 </div>
             </div>
             <div class="searchItem">
@@ -56,7 +47,13 @@
 
    <!-- TV Sci-Fi & Horror -->
     <div class="main">
-        Tv Sci-Fi & Horror
+        <div class="selector_wrap">
+            Trending
+            <div class="selector">
+                <div class="select selected" id="today" onclick="today()">Today</div>
+                <div class="select" id="thisWeek" onclick="thisWeek()">This Week</div>
+            </div>
+        </div>
     </div>
     
     <div class="section" >
@@ -69,7 +66,14 @@
     
     <!-- Latest Movies -->
     <div class="main">
-        Latest Movies
+        <div class="selector_wrap">
+            What's Popular
+        <div class="selector">
+            <div class="select selected" id="topRated" onclick="topRated()">Top Rated</div>
+            <div class="select" id="onTV" onclick="onTV()">On TV</div>
+            <div class="select" id="inTheatres" onclick="inTheatres()">In Theatres</div>
+        </div>
+        </div>
     </div>
     
     <div class="section">
@@ -80,7 +84,7 @@
 
     <!-- Popular TV -->
     <div class="main">
-        Popular TV Shows
+        Upcoming Movies
     </div>
     
     <div class="section">
@@ -89,6 +93,16 @@
         </div>
     </div>
 
+    <!-- Popular celebs -->
+    <div class="main">
+        Popular Celebrities
+    </div>
+    
+    <div class="celebs">
+        <div class="item">
+            <ul class="listItem" id="popularCelebs"></ul>
+        </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

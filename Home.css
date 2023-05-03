@@ -11,9 +11,31 @@ body{
     background-color: black;   
 }
 
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
     display: none;
+} */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:#01203b;
+    border-radius: 10px;
 }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #00ad91;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00927a;
+  }
 
 
 
@@ -28,17 +50,116 @@ body::-webkit-scrollbar{
 }
 
 
-/* #modal { 
-    position: absolute;
-    top: 55px;
-    left: 0;
+
+.skeleton{
+    /* opacity: 0.7; */
+    animation: skeleton-loading 0.8s linear infinite alternate;
     width: 100%;
-    max-height: calc(95vh - 70px);
-    overflow-y: auto;
+    height: auto;
+}
+
+.skeleton-text{
+    display: block;
+    width: 130px;
+    height: 10px;
+    margin: 5px;
+}
+
+.nameSkeleton{
+    width: 100px;
+    height: 10px;
+    margin: 5px;
+}
+
+.skeleton-text:last-child{
+    width: 60%;
+}
+
+.skeleton-text:first-child{
+    width: 50%;
+}
+
+
+.skeletonSearchText{
+    display: block;
+    width: 100px;
+    height: 10px;
+    margin: 5px;
+}
+
+.skeletonSearchText:first-child{
+    height: 20px;
+    width: 20%;
+}
+
+
+.skeletonSearchText:last-child{
+    margin-top: 20px;
+    height: 40px;
+    width: 50vw;
+}
+
+.skeletonPerson{
+    width: 100px;
+    height: 10px;
+    margin: 5px;
+}
+
+.skeletonPerson:first-child{
+    width: 200px;
+    height: 20px;
+}
+
+.skeletonPerson:last-child{
+    width: 150px;
+    height: 10px;
+}
+
+.skeletonCollection{
+    width: 100px;
+    height: 10px;
+    margin: 5px;
+}
+
+.skeletonCollection:first-child{
+    width: 200px;
+    height: 20px;
+    margin: 5px;
+}
+
+.skeletonCollection:last-child{
+    width: 50vw;
+    height: 40px;
+    margin: 5px;
+}
+
+@keyframes skeleton-loading{
+    0%{
+        background-color: rgb(160, 160, 160);
+    }
+    20%{
+        background-color: rgb(150, 150, 150);
+    }
+    40%{
+        background-color: rgb(130, 130, 130);
+    }
+    60%{
+        background-color: rgb(130, 130, 130);
+    }
+    80%{
+        background-color: rgb(150, 150, 150);
+    }
+    100%{
+        background-color: rgb(160, 160, 160);
+    }
+    
+}
+
+#searchItemImag{
+    width: 100px;
     border-radius: 5px;
-    z-index: 10;
-    display: none;
-} */
+}
+
 
 #navbar{
     display: flex;
@@ -47,8 +168,8 @@ body::-webkit-scrollbar{
     align-items: center;
     position: absolute;
 }
+
 nav{
-    /* background-color: #032541; */
     background-image: linear-gradient(170deg,#032541,#00be9f);
     width: 100%;
     display:block;
@@ -88,8 +209,9 @@ nav{
     justify-content: center;
     position: absolute;
     margin-left: 15vw;
-
 }
+
+
 #searchText:hover{
    border: 2px solid white;
    z-index: -1;
@@ -108,16 +230,27 @@ nav{
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
-    height: 410px;
+    height: 440px;
     padding: 5px 10px;
     margin: -100px 15px;
     display: block;
     background-color: black;
     z-index: -1;
 }
-.section::-webkit-scrollbar{
-    display: none;
-  }
+
+.celebs{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    height: 280px;
+    padding: 5px 10px;
+    margin: -100px 15px;
+    display: block;
+    background-color: black;
+    z-index: -1;
+}
+
+
 
 .main{
     margin: 20px;
@@ -126,6 +259,64 @@ nav{
     font-weight: bold;
 }
 
+.selector_wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+   
+}
+
+.selector{
+    display: inline-block;
+    margin-left: 20px;
+    border-radius: 30px;
+    border: 2px solid #032541;
+}
+
+.select{
+    display: inline-block;
+    margin: 0px 0px;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 400;
+    font-size: medium;
+}
+
+.selected{
+    background-color: #032541;
+    border-radius: 30px;
+    color: #00be9f;
+}
+
+.selector div:hover{
+    cursor: pointer;
+}
+
+
+.castMain{
+    display:block;
+    border: 2px solid grey;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.castImage{
+    width: 160px;
+    height: 200px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.castInfo{
+    padding: 10px;
+    color: black;
+}
+
+.characterName{
+    color: #ffffff;
+    padding-top: 5px;
+}
 
 .item{
     display: inline-block;
@@ -142,25 +333,27 @@ nav{
     list-style: none;
     padding: 10px 20px;
     width: 204px;
-    
 }
 
 .card{
-    border: 2px solid white;
-    border-radius: 15px;
-    transition: transform .37s;
+    transition: transform 0.3s;
+    width: auto;
+    height: 378px;
 }
 
 .card:hover{
-    border: 2px solid red;
-    transform: scale(1.07);
+    transform: scale(1.02);
+    border-radius: 5px;
+    background-color: rgb(29, 29, 29);
 }
 
 .cardImage img{
-    border-radius: 15px 15px 0px 0px;
+
+    border-radius: 5px 5px 0px 0px;
+    width: 204px;
     height: 300px;
-    width: 200px;
 }
+
 #rating{
     color: rgb(197, 190, 190);
 }
@@ -190,65 +383,79 @@ nav{
 #modal{
     position: absolute;
     z-index: 10;
-    display: block;
-    width: 95vw;
-    margin: 30px;
-    height: 80vh;
-    border: 2px solid white;
-    background-color: rgb(17, 16, 16);
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(8px);
 }
 
 .searchContent{
-    display: inline-block;
-    margin: 10px;
-    height: 100%;
-    /* border: 1px solid white; */
-    border-radius: 5px;
-    vertical-align: top;
-    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
 }
 
 #searchHeading{
-    display: block;
-    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    padding: 10px 10px;
     background-color: rgb(1, 180, 228);
-    border-radius: 10px 10px 0px 0px;
-    width: 90%;
+    width: auto;
+}
+
+#closeBtn{
+    justify-self: flex-end;
+    display: inline-block;
+    border: 2px solid rgb(3, 37, 65);
+    border-radius: 10px;
+    width: 80px;
+    text-align: center;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#closeBtn:hover{
+    background-color: rgb(3, 37, 65);
+    cursor: pointer;
 }
 
 .searchContentTypes{
-    display: block;
-    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
     padding: 5px;
-    width: 94%;
-    background-color: black;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 
-/* .searchContent div{
-    
-} */
-
 .searchItem{
-    display: inline-block;
-    width: 78%;
-    height: 100%;
-    overflow-y: scroll;
+    display: block;
+    width: auto;
+    height: 75vh;
+    scroll-behavior: smooth;
+    overflow-y: auto;
 }
 
 #searchList{
     width: 100%;
     display: block;
+    height: auto;
 }
 
 
 #searchList li{
     list-style: none;
-    width: 100%-padding;
+    width: 100-padding;
+    height: 100%;
     background-color: rgb(3, 37, 65);
-    border-radius: 10px;
-    margin: 10px;
-    padding: 5px;
+    border-radius: 0.6rem;
+    margin: 0.6rem;
+    padding: 0.3rem;
 }
 
 #searchList li a{
@@ -299,7 +506,7 @@ nav{
 
 #overView{
     margin-top: 10px;
-    font-size: 0.9em;
+    font-size: small;
 }
 
 .contentType{
@@ -307,27 +514,284 @@ nav{
     flex-direction: row;
     border-radius: 5px;
     padding: 8px 5px;
-    width: 94%;
-    background-color: black;
-    margin: 20px 0px;
-}
-.count{
-    display: block;
-    align-self: flex-end;
-    width: 100%;
-    text-align: end;
+    width: max-content;
+    border: 1px solid rgb(3, 37, 65);
+    margin: 10px 20px;
 }
 
-.contentType:hover ,.count:hover{
+.contentType span{
+    width: 200px;
+}
+.count{
+    display: inline-block;
+    align-self: flex-end;
+    width: auto;
+    margin-left: 20px;
+    text-align: end;
+    vertical-align: middle;
+}
+
+.count:hover , .contentType span:hover{
     cursor: pointer;
     color: #005091;
 }
 
+.contentType:hover{
+    background-color: aqua;
+}
+
+
 #TVCount{
     width: 66%;
 }
-/* .contentType{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-} */
+
+
+
+@media screen and (max-width: 700px){
+
+    .cardImage img{
+        border-radius: 5px 5px 0px 0px;
+        height: 225px;
+        width: 150px;
+    }
+
+    .card{
+        height: 300px;
+    }
+
+
+    .item ul li{
+        list-style: none;
+        padding: 10px 10px;
+        width: 150px;
+    }
+
+    #itemName{
+        font-size: 0.7rem;
+    }
+
+
+    #title{
+        display: block;
+        text-align: center;
+        padding: 0px 40px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+
+    #searchText{
+        width: 90%;
+        border: 2px solid rgb(1, 180, 228);
+        border-radius: 15px;
+        margin: 5px auto;
+        background-color: black;
+        padding: 5px 10px;
+    }
+
+    #searchBar{
+        display: block;
+        width: 70%;
+        margin: auto;
+        height: fit-content;
+        place-self: center;
+        align-self: center;
+        position: relative;
+    }
+
+    nav{
+        background-image: linear-gradient(170deg,#032541,#00be9f);
+        width: 100%;
+        display:flex;
+        margin: -20px 0px;
+        flex-direction: column;
+        position:fixed;
+        z-index: 1;
+        height: 100px;
+    }
+
+    #modal{
+        position: absolute;
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+        width: 98%;
+        margin: 10px;
+        margin-top: 100px;
+        height: 100vh;
+        background-color: rgba(0, 0,0, 0.50);
+        backdrop-filter: blur(5px);
+        
+    }
+
+    .searchContent{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .searchItem{
+        display: block;
+        height: 55vh;
+        width: 100%;
+        overflow-y: auto;
+        margin-top: 20px;
+    }
+
+    #searchHeading{
+        /* display: block; */
+        padding: 20px 10px;
+        background-color: rgb(1, 180, 228);
+        width: 100%;
+        margin-left: -10px;
+    }
+
+    /* .searchContentTypes{
+        display: block;
+        width: 100%;
+        margin: 10px;
+        overflow-x: auto;
+    } */
+    
+    .contentType{
+        font-size: 10px;
+    }
+
+    .contentType span{
+        width: 100px;
+    }
+
+    .count{
+        margin: 0px 5px;
+    }
+
+
+    #TVCount{
+        width: max-content;
+    }
+
+    #searchList{
+        width: 100%;
+        display: block;
+        height: 100%;
+        margin-top: 20px;
+    }
+    
+    
+    #searchList li{
+        list-style: none;
+        width: 90%;
+        background-color: rgb(3, 37, 65);
+        border-radius: 10px;
+        height: auto;
+        margin: 10px;
+        padding: 5px;
+        z-index: 999;
+    }
+    
+    #searchList li a{
+        text-decoration: none;
+    }
+    
+    .searchMainDiv{
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+        padding: 3px;
+        width: 100%-padding;
+        border: 2px solid green;
+    }
+    
+    #searchItemImage{
+        display: inline-block;
+        max-width: 100px;
+        max-height: 100%;
+        border-radius: 5px 0px 0px 5px;
+    }
+    
+    .searchItemInfo{
+        display: inline-flex;
+        width: fit-content;
+        height: auto;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    
+    #searchItemName{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    
+    #searchItemRating{
+        font-size: small;
+        font-weight:500;
+    }
+
+    #searchItemDate{
+        font-size: 0.7rem;
+    }
+    
+    .movieItem{
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        width: 100%;
+        height: 150px;
+    }
+    
+    #overView{
+        margin-top: 10px;
+        font-size: x-small;
+    }
+
+    .castImage{
+        width: 130px;
+        height: 190px;
+    }
+
+    .castName , .characterName{
+        font-size: 0.7rem
+
+    }
+
+    .section{
+        height: 340px;
+    }
+
+    .celebs{
+        height: 250px;
+    }
+
+    #searchItemImag{
+        width: 100px;
+        border-radius: 5px;
+    }
+
+    .select{
+        font-size: small;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .selector{
+        margin-left: 10px;
+        margin-top: 10px;
+        height: auto;
+    }
+
+    .select{
+        font-size: x-small;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #overView{
+        margin-top: 10px;
+        font-size: 0.45em;
+    }
+}
+
+
+
+    
