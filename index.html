@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movify</title>
+    <link rel="stylesheet" href="Home.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="home">
+
+    <nav>
+        <div id="title">
+            Movify
+        </div>
+        
+        <div id="searchBar">
+
+            <form  id="searchForm" >
+                <input id="searchText" onblur="hideSearchList()" oninput="getSearchResults()" onfocus="getSearchResults()" onsubmit="getSearchResults()" type="text" placeholder="Search Here">
+            </form>
+        </div>
+
+        <div id="modal" tabindex="1" >
+            <div class="searchContent">
+                <div id="searchHeading">
+                    Search Results
+                    <div id="closeBtn">Close</div>
+                </div>
+                <div class="searchContentTypes">
+                    <div class="contentType" id="movies" onclick="onclickMovies()"><span> Movies </span> <div class="count" id="movieCount"></div></div>
+                    <div class="contentType" id="tv" onclick="onclickTV()" ><span> TV Shows </span><div class="count" id="TVCount"></div></div>
+                    <div class="contentType" id="person" onclick="onclickPersons()"><span> People </span> <div class="count" id="personCount"></div></div>
+                    <div class="contentType" id="collection" onclick="onclickCollections()"><span> Collections </span> <div class="count" id="collectionCount"></div></div>
+                </div>
+            </div>
+            <div class="searchItem">
+                <ul id="searchList">
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+
+   <!-- TV Sci-Fi & Horror -->
+    <div class="main">
+        <div class="selector_wrap">
+            Trending
+            <div class="selector">
+                <div class="select selected" id="today" onclick="today()">Today</div>
+                <div class="select" id="thisWeek" onclick="thisWeek()">This Week</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" >
+        <div class="item">
+            <ul class="listItem" id="tvList">
+            </ul>
+        </div>
+    </div>
+
+    
+    <!-- Latest Movies -->
+    <div class="main">
+        <div class="selector_wrap">
+            What's Popular
+        <div class="selector">
+            <div class="select selected" id="topRated" onclick="topRated()">Top Rated</div>
+            <div class="select" id="onTV" onclick="onTV()">On TV</div>
+            <div class="select" id="inTheatres" onclick="inTheatres()">In Theatres</div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="item">
+            <ul class="listItem" id="latestMovieItem"></ul>
+        </div>
+    </div>
+
+    <!-- Popular TV -->
+    <div class="main">
+        Upcoming Movies
+    </div>
+    
+    <div class="section">
+        <div class="item">
+            <ul class="listItem" id="popularTV"></ul>
+        </div>
+    </div>
+
+    <!-- Popular celebs -->
+    <div class="main">
+        Popular Celebrities
+    </div>
+    
+    <div class="celebs">
+        <div class="item">
+            <ul class="listItem" id="popularCelebs"></ul>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+<script src="Home.js"></script>
+</html>
