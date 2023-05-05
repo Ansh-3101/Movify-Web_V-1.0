@@ -12,7 +12,6 @@ async function setParameters(id,type) {
     .then((data) =>{
 
         validate(data);
-        console.log(data);
 
         // Title Bar
         document.getElementById('title').innerHTML = data?.original_title;
@@ -404,10 +403,9 @@ async function itemInfo(id ,type) {
         
         document.getElementById('cardImage').src = poster
         const backdropPath = `https://image.tmdb.org/t/p/original/${data.backdrop_path}`
-        console.log(backdropPath);
         
-       
-       
+        
+
             document.title = data.original_title;
             document.getElementById('itemName').innerHTML = data?.title
             document.getElementById('itemDate').innerHTML = data?.release_date;
@@ -487,11 +485,12 @@ const getBGColor = (url) =>{
     return new Promise(function(resolve,reject) {
         const image = new Image();
         image.setAttribute("crossOrigin","")
+        image.src = url;
 
         image.setAttribute("Access-Control-Allow-Origin","*");
 
         image.onerror = image.onabort = () =>{
-            reject("error");
+            console.log("Failed to load Colors ");
         };
 
         image.onload = () =>{
@@ -508,7 +507,7 @@ const getBGColor = (url) =>{
 
         };
 
-        image.src = url;
+    
     });
 };
 

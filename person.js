@@ -13,7 +13,7 @@ async function getCastInfo(castId) {
     const castInfoUrl = `https://api.themoviedb.org/3/person/${castId}?api_key=${key}`
     fetch(castInfoUrl)?.then((response)=>response.json())
     .then((data)=>{
-        console.log(data);
+
 
         validate(data)
         

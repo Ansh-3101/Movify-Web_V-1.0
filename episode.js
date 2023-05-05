@@ -4,10 +4,11 @@ const id = new URL(document.URL).searchParams.get("id")
 const episodeNumber = new URL(document.URL).searchParams.get("eno")
 
 
-async function setParameters(id) {
+ function setParameters(id) {
     const getEpisodeDetailsUrl = `https://api.themoviedb.org/3/tv/${id}/season/${season_number}/episode/${episodeNumber}?api_key=${key}&language=en-US`;
     fetch(getEpisodeDetailsUrl)?.then((response) =>(response.json()))
     .then((data) =>{
+        getBGColor(`https://image.tmdb.org/t/p/original${data?.still_path}`)
 
         document.getElementById('episodeTitle').innerHTML = data?.name;
         document.title = data?.name;
@@ -40,10 +41,6 @@ async function setParameters(id) {
         getCast(data);
 
         getCrew(data)
-
-        // Set Colors
-        getBGColor(`https://image.tmdb.org/t/p/w500${data?.still_path}`)
-
 
     })
     

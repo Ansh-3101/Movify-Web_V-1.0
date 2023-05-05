@@ -16,7 +16,7 @@ let itemColor;
 
 
         // Colors
-        getBGColor(`https://image.tmdb.org/t/p/w500${data?.poster_path}`);
+        getBGColor(`https://image.tmdb.org/t/p/original${data?.poster_path}`);
 
 
         validate(data)
@@ -301,7 +301,8 @@ async function getReviews(id,type) {
     const reviewsUrl = `https://api.themoviedb.org/3/${type}/${id}/reviews?api_key=${key}`
     fetch(reviewsUrl)?.then((response  => response.json()))
     .then((data)=>{
-        console.log(data);
+        
+        
         if (data?.results?.length == 0) {
             document.getElementById("reviewDiv").style.display = "none"
         }
@@ -552,8 +553,11 @@ const getBGColor = (url) =>{
             setColors(hex);
 
         };
-
         image.src = url;
+        image.setAttribute("crossOrigin","")
+
+        image.setAttribute("Access-Control-Allow-Origin","any");
+
     });
 };
 

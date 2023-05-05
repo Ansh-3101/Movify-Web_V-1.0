@@ -13,8 +13,7 @@ async function setCollection(collectionId) {
     fetch(collectionUrl)?.then((response)=>response.json())
     .then((data)=>{
 
-        // validate(data)
-        console.log(data);
+        
         let poster = `https://image.tmdb.org/t/p/original${data?.poster_path}`
         if (data?.poster_path == null) {
             poster = `./images/noImage.png`

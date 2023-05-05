@@ -43,7 +43,7 @@ async function setParameters(id) {
 
 
         // Set Color
-        getBGColor(`https://image.tmdb.org/t/p/w500${data?.poster_path}`)
+        getBGColor(`https://image.tmdb.org/t/p/original${data?.poster_path}`)
 
     })
     
