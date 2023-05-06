@@ -117,7 +117,7 @@ function getPopularCelebs(url) {
 
 
         celeb.innerHTML = `
-        <a href="person.html?id=${element.id}" class="castMain" onclick={onClickCast(${element.id})}>
+        <a href="person" class="castMain" onclick={onClickCast(${element.id})}>
         <div class="castImageCard">
             <img class="castImage skeleton" src="${poster}" alt="">
         </div>  
