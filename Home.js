@@ -19,6 +19,11 @@ getUpcomingMovies(upComingMovies)
 document.getElementById('searchBar').addEventListener("blur", hideSearchList,true);
 document.getElementById('searchBar').addEventListener("click", submit(),false);
 
+document.getElementById('searchForm').addEventListener("submit",(e)=>{
+    e.preventDefault();
+    getSearchResults()
+})
+
 
 document.getElementById("today").addEventListener("onclick",()=>{
     document.getElementById("today").className = "select selected"
