@@ -39,6 +39,14 @@ body{
 
 
 
+#title h1{
+    display: inline-block;
+    color: rgb(66, 191, 199);
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 #title{
     display: inline-block;
     color: rgb(66, 191, 199);
@@ -577,6 +585,11 @@ nav{
         padding: 0px 40px;
         padding-top: 5px;
         padding-bottom: 0px;
+    }
+
+    #title h1{
+        display: block;
+        text-align: center;
     }
 
     #searchText{
